@@ -14,18 +14,18 @@ local function find_esbonio()
     return nil
   end
 
-  local poetry = vim.fs.find("poetry.lock", { path = repo })
+  local poetry = vim.fs.find("poetry.lock", { path = repo, upward = true })
   if #poetry > 0 then
     return { "poetry", "run", "python", "-m", "esbonio" }
   end
 
-  local venv = vim.fs.find(".venv", { path = repo })
+  local venv = vim.fs.find(".venv", { path = repo, upward = true })
   if #venv > 0 then
     return { venv[1] .. "/bin/python", "-m", "esbonio" }
   end
 
   print(venv)
-  local candidates = vim.fs.find("pyvenv.cfg", { path = repo })
+  local candidates = vim.fs.find("pyvenv.cfg", { path = repo, upward = true })
   if #candidates == 0 then
     return nil
   end
