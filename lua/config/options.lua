@@ -21,7 +21,7 @@ vim.cmd("inoremap kj <ESC>")
 -- vim.cmd("highlight ColorColumn ctermbg=238")
 
 -- Disable LazyVim auto format
-vim.g.autoformat = false
+-- vim.g.autoformat = false
 
 -- Delete trailing whitespace on close
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
