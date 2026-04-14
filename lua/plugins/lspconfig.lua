@@ -9,6 +9,15 @@ return {
         pyright = {},
         clangd = {},
         ansiblels = {},
+        nil_ls = {
+          settings = {
+            ["nil"] = {
+              nix = {
+                autoArchive = true,
+              },
+            },
+          },
+        },
       },
     },
   },
