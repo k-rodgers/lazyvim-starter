@@ -13,7 +13,9 @@ return {
           settings = {
             ["nil"] = {
               nix = {
-                autoArchive = true,
+                flake = {
+                  autoArchive = true,
+                },
               },
             },
           },
